@@ -4,13 +4,13 @@ import requests
 import random
 
 @app.route('/')
-@app.route('/animal/name' methods=['GET','POST'])
+@app.route('/animal/name', methods=['GET','POST'])
 def animal_name():
     animal_list=["fish", "pig","parrot","dog", "sheep", "cat "]
     data = random.choice(animal_list)
     return Response(data, mimetype='text/plain')
 
-@app.route('/animal/noise' methods=['GET','POST'])
+@app.route('/animal/noise', methods=['GET','POST'])
 def animal_noise():
     response=request.data.decode('utf-8')
     if response == "fish":
