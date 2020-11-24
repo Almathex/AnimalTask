@@ -6,7 +6,7 @@ import random
 @app.route('/')
 @app.route('/animal/name', methods=['GET','POST'])
 def animal_name():
-    animal_list=["fish", "pig","parrot","dog", "sheep", "cat "]
+    animal_list=["fish", "pig","parrot","dog", "sheep", "cat"]
     data = random.choice(animal_list)
     return Response(data, mimetype='text/plain')
 
@@ -26,5 +26,5 @@ def animal_noise():
     elif response == "cat":
         noise = "Meow"    
     else:
-        noise = "*Villager noises*"
+        noise = "huh?"
     return Response(noise, mimetype='text/plain')
