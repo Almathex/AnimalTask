@@ -1,5 +1,0 @@
-{
-  "service1/testing/test_mock_app1.py": true, 
-  "testing/test_mock_app1.py": true, 
-  "testing/test_service_2.py": true
-}
