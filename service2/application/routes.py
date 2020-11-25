@@ -7,8 +7,8 @@ import random
 @app.route('/animal/name', methods=['GET','POST'])
 def animal_name():
     animal_list=["fish", "pig","parrot","dog", "sheep", "cat"]
-    data = random.choice(animal_list)
-    return Response(data, mimetype='text/plain')
+    animalrandom = random.choice(animal_list)
+    return Response(animalrandom, mimetype='text/plain')
 
 @app.route('/animal/noise', methods=['GET','POST'])
 def animal_noise():
