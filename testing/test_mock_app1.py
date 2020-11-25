@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 from requests.api import request
 import requests
-from application import app
+from service1.application import app
 
 class TestBase(TestCase):
     def create_app(self):
