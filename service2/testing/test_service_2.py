@@ -23,21 +23,21 @@ class TestAnimals(TestBase):
         
         )
         self.assertIn(b'Gulp', response.data)
-    def test_noise_cow(self):
+    def test_noise_pig(self):
         response =self.client.post(
             url_for('animal_noise'),
             data='pig',
             
         )
         self.assertIn(b'Oink', response.data)  
-    def test_noise_dog(self):
+    def test_noise_parrot(self):
         response =self.client.post(
             url_for('animal_noise'),
             data='parrot',
             
         )
         self.assertIn(b'Polly wants a cracker', response.data)
-    def test_noise_cat(self):
+    def test_noise_dog(self):
         response =self.client.post(
             url_for('animal_noise'),
             data='dog'
@@ -49,10 +49,16 @@ class TestAnimals(TestBase):
             url_for('animal_noise'),
             data='sheep'
         )
-        self.asserIn(b'Baaa',response.data)
+        self.assertIn(b'Baaa',response.data)
     def test_noise_cat(self):
         response =self.client.post(
             url_for('animal_noise'),
             data='cat'
         )    
-        self.asserIn(b'Meow',response.data)    
+        self.assertIn(b'Meow',response.data)    
+    def test_noise_huh(self):
+        response =self.client.post(
+            url_for('animal_noise'),
+            data='Rickard'
+        )    
+        self.assertIn(b'huh?',response.data)    
