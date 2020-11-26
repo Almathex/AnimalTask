@@ -1,4 +1,4 @@
 #!/bin/sh
-docker stack deploy --compose-file docker-compose.yaml stack
+sudo docker stack deploy --compose-file docker-compose.yaml stack
 
 
