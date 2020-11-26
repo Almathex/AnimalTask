@@ -1,3 +1,4 @@
 #!/bin/sh
-cd AnimalTask
-sudo docker-compose up -d
+docker stack deploy --compose-file docker-compose.yaml stack
+
+

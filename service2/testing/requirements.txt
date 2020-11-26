@@ -1,5 +1,0 @@
-Flask
-pytest
-flask_testing
-pytest-cov
-requests_mock
