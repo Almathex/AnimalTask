@@ -1,10 +1,11 @@
+
 from flask import url_for
 from flask_testing import TestCase
 from unittest.mock import patch
 
 from requests.api import request
 import requests
-from service1.application import app
+from application import app
 
 class TestBase(TestCase):
     def create_app(self):
@@ -25,5 +26,3 @@ class TestResponse(TestBase):
                 self.assertIn(b'fish', response.data)
                 self.assertIn(b'Gulp', response.data)
                 self.assertEqual(response.status_code, 200)
-          
-
